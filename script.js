@@ -24,13 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
      const authorPara = card.querySelector('.book-author');
      const coverImg = card.querySelector('.book-cover');
 
-
      titleLink.textContent = book.title;
      titleLink.href = book.goodreads_url;
      authorPara.textContent = 'by ' + book.author;
 
-      coverImg.src = book.cover_image;
-      coverImg.alt = book.title + " cover";
+     coverImg.src = book.cover_image;
+     coverImg.alt = book.title + " cover";
+
+     card.addEventListener('click', () => {
+      window.location.href = book.goodreads_url;
+     });
 
      container.appendChild(colDiv);
          });
