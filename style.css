@@ -41,6 +41,19 @@ body {
     font-size: 1.5rem;
   }
 
+  .book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+  }
+  
+  .book .btn {
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+
   /* .book-name {
     color: black;
   } */

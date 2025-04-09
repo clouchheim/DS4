@@ -13,26 +13,43 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch('books.json')
       .then(response => response.json())
       .then(books => {
+
+        books.sort((a, b) => a.title.localeCompare(b.title)); // had them populate alphabetically on default
+
         books.forEach(book => {
-
-     const colDiv = template.cloneNode(true);
-     colDiv.style.display = 'block';
-     colDiv.classList.remove('card-template'); 
-
-     const card = colDiv.querySelector('.book');
-     const titleLink = card.querySelector('.book-title');
-     const authorPara = card.querySelector('.book-author');
-     const coverImg = card.querySelector('.book-cover');
-
-     titleLink.textContent = book.title;
-     titleLink.href = book.goodreads_url;
-     authorPara.textContent = 'by ' + book.author;
-
-     coverImg.src = book.cover_image;
-     coverImg.alt = book.title + " cover";
-
-     container.appendChild(colDiv);
-         });
+          const colDiv = template.cloneNode(true);
+          colDiv.style.display = 'block';
+          colDiv.classList.remove('card-template'); 
+          
+          const card = colDiv.querySelector('.book');
+          const titleLink = card.querySelector('.book-title');
+          const authorPara = card.querySelector('.book-author');
+          const coverImg = card.querySelector('.book-cover');
+          const button = card.querySelector('button');
+          
+          titleLink.textContent = book.title;
+          titleLink.href = book.goodreads_url;
+          authorPara.textContent = 'by ' + book.author;
+          
+          coverImg.src = book.cover_image;
+          coverImg.alt = book.title + " cover";
+          
+          // data for the Modal Button
+          button.setAttribute('data-bs-toggle', 'modal');
+          button.setAttribute('data-bs-target', '#learn-more-modal');
+          button.addEventListener('click', () => {
+            document.getElementById('modalTitle').textContent = book.title;
+            document.querySelector('.modal-body .book-author').textContent = 'Author: ' + book.author;
+            document.querySelector('.modal-body .book-genre').textContent = 
+              'Genre: ' + (Array.isArray(book.genres) ? book.genres.join(', ') : 'N/A');
+            document.querySelector('.modal-body .book-date').textContent = 'Published: ' + book.year_published;
+            document.querySelector('.modal-body .book-pages').textContent = 'Length: ' + book.pages + ' pages';
+            document.querySelector('.modal-body .book-description').textContent = book.description;
+            document.getElementById('good-reads-link').href = book.goodreads_url;
+          });
+          
+          container.appendChild(colDiv);
+          });        
       })
       .catch(error => {
         console.error('Error loading books:', error);

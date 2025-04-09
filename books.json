@@ -1,183 +1,182 @@
 [
-    {
-      "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "genre": "Classic Fiction",
-      "year_published": 1925,
-      "description": "A critique of the American Dream through the tragic story of Jay Gatsby and his obsessive love for Daisy Buchanan.",
-      "cover_image": "https://m.media-amazon.com/images/I/81TLiZrasVL.jpg",
-      "pages": 180,
-      "goodreads_url": "https://www.goodreads.com/search?q=The+Great+Gatsby"
-    },
-    {
-      "title": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "genre": "Southern Gothic, Bildungsroman",
-      "year_published": 1960,
-      "description": "Explores themes of racial injustice and loss of innocence through the eyes of Scout Finch in the Deep South.",
-      "cover_image": "https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg",
-      "pages": 281,
-      "goodreads_url": "https://www.goodreads.com/search?q=To+Kill+a+Mockingbird"
-    },
-    {
-      "title": "1984",
-      "author": "George Orwell",
-      "genre": "Dystopian, Science Fiction",
-      "year_published": 1949,
-      "description": "A chilling vision of a totalitarian regime where surveillance and thought control dictate every aspect of life.",
-      "cover_image": "https://m.media-amazon.com/images/I/61NAx5pd6XL.jpg",
-      "pages": 328,
-      "goodreads_url": "https://www.goodreads.com/search?q=1984"
-    },
-    {
-      "title": "Pride and Prejudice",
-      "author": "Jane Austen",
-      "genre": "Romance, Classic Fiction",
-      "year_published": 1813,
-      "description": "Centers on the spirited Elizabeth Bennet and her turbulent relationship with the proud Mr. Darcy.",
-      "cover_image": "https://m.media-amazon.com/images/I/81Scutrtj4L._UF1000,1000_QL80_.jpg",
-      "pages": 279,
-      "goodreads_url": "https://www.goodreads.com/search?q=Pride+and+Prejudice"
-    },
-    {
-      "title": "Moby-Dick",
-      "author": "Herman Melville",
-      "genre": "Adventure, Classic Fiction",
-      "year_published": 1851,
-      "description": "Follows Captain Ahab's obsessive quest to take revenge on the white whale Moby Dick.",
-      "cover_image": "https://m.media-amazon.com/images/I/51aV053NRjL._AC_UF1000,1000_QL80_.jpg",
-      "pages": 635,
-      "goodreads_url": "https://www.goodreads.com/search?q=Moby-Dick"
-    },
-    {
-      "title": "The Catcher in the Rye",
-      "author": "J.D. Salinger",
-      "genre": "Coming-of-age, Classic Fiction",
-      "year_published": 1951,
-      "description": "Narrates the experiences of Holden Caulfield, a cynical teenager navigating the complexities of adolescence.",
-      "cover_image": "https://m.media-amazon.com/images/I/8125BDk3l9L._AC_UF1000,1000_QL80_.jpg",
-      "pages": 214,
-      "goodreads_url": "https://www.goodreads.com/search?q=The+Catcher+in+the+Rye"
-    },
-    {
-      "title": "The Hobbit",
-      "author": "J.R.R. Tolkien",
-      "genre": "Fantasy, Adventure",
-      "year_published": 1937,
-      "description": "Bilbo Baggins embarks on a magical quest to reclaim a lost dwarven kingdom from a fearsome dragon.",
-      "cover_image": "https://m.media-amazon.com/images/I/712cDO7d73L.jpg",
-      "pages": 310,
-      "goodreads_url": "https://www.goodreads.com/search?q=The+Hobbit"
-    },
-    {
-      "title": "Fahrenheit 451",
-      "author": "Ray Bradbury",
-      "genre": "Dystopian, Science Fiction",
-      "year_published": 1953,
-      "description": "Depicts a society where books are outlawed and 'firemen' burn any that are found.",
-      "cover_image": "https://m.media-amazon.com/images/I/61zc4fPQbIL.jpg",
-      "pages": 194,
-      "goodreads_url": "https://www.goodreads.com/search?q=Fahrenheit+451"
-    },
-    {
-      "title": "Jane Eyre",
-      "author": "Charlotte Brontë",
-      "genre": "Romance, Gothic Fiction",
-      "year_published": 1847,
-      "description": "Follows Jane's growth to adulthood and her love for the brooding Mr. Rochester, uncovering dark secrets at Thornfield Hall.",
-      "cover_image": "https://m.media-amazon.com/images/I/81pwJjgcwwL.jpg",
-      "pages": 500,
-      "goodreads_url": "https://www.goodreads.com/search?q=Jane+Eyre"
-    },
-    {
-      "title": "Wuthering Heights",
-      "author": "Emily Brontë",
-      "genre": "Gothic Fiction, Romance",
-      "year_published": 1847,
-      "description": "An intense tale of love and revenge revolving around Heathcliff and Catherine on the windswept Yorkshire moors.",
-      "cover_image": "https://m.media-amazon.com/images/I/81-8dCuxEsL.jpg",
-      "pages": 416,
-      "goodreads_url": "https://www.goodreads.com/search?q=Wuthering+Heights"
-    },
-    {
-      "title": "Brave New World",
-      "author": "Aldous Huxley",
-      "genre": "Dystopian, Science Fiction",
-      "year_published": 1932,
-      "description": "A futuristic society driven by technological advancements, social conditioning, and enforced happiness.",
-      "cover_image": "https://m.media-amazon.com/images/I/71GNqqXuN3L.jpg",
-      "pages": 268,
-      "goodreads_url": "https://www.goodreads.com/search?q=Brave+New+World"
-    },
-    {
-      "title": "Crime and Punishment",
-      "author": "Fyodor Dostoevsky",
-      "genre": "Philosophical Fiction, Psychological Fiction",
-      "year_published": 1866,
-      "description": "Explores morality, guilt, and redemption through the experiences of the impoverished ex-student Raskolnikov.",
-      "cover_image": "https://m.media-amazon.com/images/I/612KmKeEYEL._AC_UF1000,1000_QL80_.jpg",
-      "pages": 430,
-      "goodreads_url": "https://www.goodreads.com/search?q=Crime+and+Punishment"
-    },
-    {
-      "title": "Anna Karenina",
-      "author": "Leo Tolstoy",
-      "genre": "Classic Fiction, Romance",
-      "year_published": 1877,
-      "description": "Examines love, family, and social dynamics within Russian society through the tragic story of Anna Karenina.",
-      "cover_image": "https://m.media-amazon.com/images/I/81BvKZDKonL.jpg",
-      "pages": 864,
-      "goodreads_url": "https://www.goodreads.com/search?q=Anna+Karenina"
-    },
-    {
-      "title": "Frankenstein",
-      "author": "Mary Shelley",
-      "genre": "Gothic Fiction, Science Fiction",
-      "year_published": 1818,
-      "description": "Victor Frankenstein creates a monstrous being, leading to catastrophic consequences and moral dilemmas.",
-      "cover_image": "https://m.media-amazon.com/images/I/81TVqiv-ctL._AC_UF1000,1000_QL80_.jpg",
-      "pages": 280,
-      "goodreads_url": "https://www.goodreads.com/search?q=Frankenstein"
-    },
-    {
-      "title": "Dracula",
-      "author": "Bram Stoker",
-      "genre": "Gothic Horror",
-      "year_published": 1897,
-      "description": "A classic horror tale featuring the infamous vampire Count Dracula and his pursuit of victims in Victorian England.",
-      "cover_image": "https://m.media-amazon.com/images/I/71xcDXkr1OL._AC_UF1000,1000_QL80_DpWeblab_.jpg",
-      "pages": 418,
-      "goodreads_url": "https://www.goodreads.com/search?q=Dracula"
-    },
-    {
-      "title": "The Odyssey",
-      "author": "Homer",
-      "genre": "Epic Poetry, Mythology",
-      "year_published": "8th century BC",
-      "description": "Odysseus' perilous journey home after the Trojan War, filled with mythological adventures.",
-      "cover_image": "https://m.media-amazon.com/images/I/81g0AATkO9L.jpg",
-      "pages": 500,
-      "goodreads_url": "https://www.goodreads.com/search?q=The+Odyssey"
-    },
-    {
-      "title": "Les Misérables",
-      "author": "Victor Hugo",
-      "genre": "Historical Fiction",
-      "year_published": 1862,
-      "description": "An epic portrayal of injustice, heroism, and redemption in 19th-century France.",
-      "cover_image": "https://m.media-amazon.com/images/I/81e1NPAQJmL.jpg",
-      "pages": 1463,
-      "goodreads_url": "https://www.goodreads.com/search?q=Les+Mis%C3%A9rables"
-    },
-    {
-      "title": "The Alchemist",
-      "author": "Paulo Coelho",
-      "genre": "Adventure, Fantasy",
-      "year_published": 1988,
-      "description": "A young shepherd's mystical journey seeking treasure and discovering personal legend and self-realization.",
-      "cover_image": "https://m.media-amazon.com/images/I/61OuRVln3BL._AC_UF1000,1000_QL80_.jpg",
-      "pages": 197,
-      "goodreads_url": "https://www.goodreads.com/search?q=The+Alchemist"
-    }
-  ]
-  
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genres": ["Classic Fiction"],
+    "year_published": 1925,
+    "description": "A critique of the American Dream through the tragic story of Jay Gatsby and his obsessive love for Daisy Buchanan.",
+    "cover_image": "https://m.media-amazon.com/images/I/81TLiZrasVL.jpg",
+    "pages": 180,
+    "goodreads_url": "https://www.goodreads.com/book/show/41733839-the-great-gatsby?from_search=true&from_srp=true&qid=9K8cTStUYR&rank=1"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genres": ["Classic Fiction", "Coming-of-Age"],
+    "year_published": 1960,
+    "description": "Explores themes of racial injustice and loss of innocence through the eyes of Scout Finch in the Deep South.",
+    "cover_image": "https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg",
+    "pages": 281,
+    "goodreads_url": "https://www.goodreads.com/book/show/56916837-to-kill-a-mockingbird?from_search=true&from_srp=true&qid=zjVStsHZH5&rank=1"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genres": ["Science Fiction", "Dystopian"],
+    "year_published": 1949,
+    "description": "A chilling vision of a totalitarian regime where surveillance and thought control dictate every aspect of life.",
+    "cover_image": "https://m.media-amazon.com/images/I/61NAx5pd6XL.jpg",
+    "pages": 328,
+    "goodreads_url": "https://www.goodreads.com/book/show/61439040-1984?from_search=true&from_srp=true&qid=1MKKJZMVc3&rank=1"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genres": ["Classic Fiction", "Romance"],
+    "year_published": 1813,
+    "description": "Centers on the spirited Elizabeth Bennet and her turbulent relationship with the proud Mr. Darcy.",
+    "cover_image": "https://m.media-amazon.com/images/I/81Scutrtj4L._UF1000,1000_QL80_.jpg",
+    "pages": 279,
+    "goodreads_url": "https://www.goodreads.com/book/show/129915654-pride-prejudice?from_search=true&from_srp=true&qid=0KOz8eVtG8&rank=1"
+  },
+  {
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "genres": ["Classic Fiction", "Adventure"],
+    "year_published": 1851,
+    "description": "Follows Captain Ahab's obsessive quest to take revenge on the white whale Moby Dick.",
+    "cover_image": "https://m.media-amazon.com/images/I/51aV053NRjL._AC_UF1000,1000_QL80_.jpg",
+    "pages": 635,
+    "goodreads_url": "https://www.goodreads.com/book/show/153747.Moby_Dick_or_The_Whale?from_search=true&from_srp=true&qid=dkoIehuvll&rank=1"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genres": ["Classic Fiction", "Coming-of-Age"],
+    "year_published": 1951,
+    "description": "Narrates the experiences of Holden Caulfield, a cynical teenager navigating the complexities of adolescence.",
+    "cover_image": "https://m.media-amazon.com/images/I/8125BDk3l9L._AC_UF1000,1000_QL80_.jpg",
+    "pages": 214,
+    "goodreads_url": "https://www.goodreads.com/book/show/5107.The_Catcher_in_the_Rye?from_search=true&from_srp=true&qid=Yi5U32ROjq&rank=1"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genres": ["Fantasy", "Adventure"],
+    "year_published": 1937,
+    "description": "Bilbo Baggins embarks on a magical quest to reclaim a lost dwarven kingdom from a fearsome dragon.",
+    "cover_image": "https://m.media-amazon.com/images/I/712cDO7d73L.jpg",
+    "pages": 366,
+    "goodreads_url": "https://www.goodreads.com/book/show/5907.The_Hobbit_or_There_and_Back_Again?from_search=true&from_srp=true&qid=soGwUhsCjI&rank=1"
+  },
+  {
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "genres": ["Science Fiction", "Dystopian"],
+    "year_published": 1953,
+    "description": "Depicts a society where books are outlawed and 'firemen' burn any that are found.",
+    "cover_image": "https://m.media-amazon.com/images/I/61zc4fPQbIL.jpg",
+    "pages": 194,
+    "goodreads_url": "https://www.goodreads.com/book/show/13079982-fahrenheit-451?from_search=true&from_srp=true&qid=OmQPiYGuTh&rank=1"
+  },
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "genres": ["Classic Fiction", "Romance", "Gothic Fiction"],
+    "year_published": 1847,
+    "description": "Follows Jane's growth to adulthood and her love for the brooding Mr. Rochester, uncovering dark secrets at Thornfield Hall.",
+    "cover_image": "https://m.media-amazon.com/images/I/81pwJjgcwwL.jpg",
+    "pages": 500,
+    "goodreads_url": "https://www.goodreads.com/book/show/10210.Jane_Eyre?from_search=true&from_srp=true&qid=yVxLOVdg5Y&rank=1"
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "genres": ["Classic Fiction", "Romance", "Gothic Fiction"],
+    "year_published": 1847,
+    "description": "An intense tale of love and revenge revolving around Heathcliff and Catherine on the windswept Yorkshire moors.",
+    "cover_image": "https://m.media-amazon.com/images/I/81-8dCuxEsL.jpg",
+    "pages": 416,
+    "goodreads_url": "https://www.goodreads.com/book/show/130346.Bronte?from_search=true&from_srp=true&qid=NqzegPXpZJ&rank=1"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genres": ["Science Fiction", "Dystopian"],
+    "year_published": 1932,
+    "description": "A futuristic society driven by technological advancements, social conditioning, and enforced happiness.",
+    "cover_image": "https://m.media-amazon.com/images/I/71GNqqXuN3L.jpg",
+    "pages": 268,
+    "goodreads_url": "https://www.goodreads.com/book/show/5129.Brave_New_World?from_search=true&from_srp=true&qid=OPXy8sUNKx&rank=1"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "genres": ["Classic Fiction", "Philosophical Fiction", "Psychological Fiction"],
+    "year_published": 1866,
+    "description": "Explores morality, guilt, and redemption through the experiences of the impoverished ex-student Raskolnikov.",
+    "cover_image": "https://m.media-amazon.com/images/I/612KmKeEYEL._AC_UF1000,1000_QL80_.jpg",
+    "pages": 671,
+    "goodreads_url": "https://www.goodreads.com/book/show/7144.Crime_and_Punishment?from_search=true&from_srp=true&qid=YQNjDko34H&rank=1"
+  },
+  {
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "genres": ["Classic Fiction", "Romance", "Historical Fiction"],
+    "year_published": 1877,
+    "description": "Examines love, family, and social dynamics within Russian society through the tragic story of Anna Karenina.",
+    "cover_image": "https://m.media-amazon.com/images/I/81BvKZDKonL.jpg",
+    "pages": 964,
+    "goodreads_url": "https://www.goodreads.com/book/show/15823480-anna-karenina?from_search=true&from_srp=true&qid=MEaL8jFrOT&rank=1"
+  },
+  {
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "genres": ["Science Fiction", "Gothic Fiction", "Classic Fiction"],
+    "year_published": 1818,
+    "description": "Victor Frankenstein creates a monstrous being, leading to catastrophic consequences and moral dilemmas.",
+    "cover_image": "https://m.media-amazon.com/images/I/81TVqiv-ctL._AC_UF1000,1000_QL80_.jpg",
+    "pages": 260,
+    "goodreads_url": "https://www.goodreads.com/book/show/35031085-frankenstein?from_search=true&from_srp=true&qid=60cnT2Qvdk&rank=3"
+  },
+  {
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "genres": ["Gothic Fiction", "Horror"],
+    "year_published": 1897,
+    "description": "A classic horror tale featuring the infamous vampire Count Dracula and his pursuit of victims in Victorian England.",
+    "cover_image": "https://m.media-amazon.com/images/I/71xcDXkr1OL._AC_UF1000,1000_QL80_DpWeblab_.jpg",
+    "pages": 488,
+    "goodreads_url": "https://www.goodreads.com/book/show/17245.Dracula?from_search=true&from_srp=true&qid=kqqVvFMuX8&rank=1"
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer",
+    "genres": ["Epic Poetry", "Mythology", "Adventure"],
+    "year_published": 701,
+    "description": "Odysseus' perilous journey home after the Trojan War, filled with mythological adventures.",
+    "cover_image": "https://m.media-amazon.com/images/I/81g0AATkO9L.jpg",
+    "pages": 580,
+    "goodreads_url": "https://www.goodreads.com/book/show/1381.The_Odyssey?from_search=true&from_srp=true&qid=fDND1GlGMe&rank=1"
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "genres": ["Classic Fiction", "Historical Fiction"],
+    "year_published": 1862,
+    "description": "An epic portrayal of injustice, heroism, and redemption in 19th-century France.",
+    "cover_image": "https://m.media-amazon.com/images/I/81e1NPAQJmL.jpg",
+    "pages": 1463,
+    "goodreads_url": "https://www.goodreads.com/book/show/24280.Les_Mis_rables?from_search=true&from_srp=true&qid=rYDAuQjNDV&rank=1"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genres": ["Fantasy", "Adventure", "Philosophical Fiction"],
+    "year_published": 1988,
+    "description": "A young shepherd's mystical journey seeking treasure and discovering personal legend and self-realization.",
+    "cover_image": "https://m.media-amazon.com/images/I/61OuRVln3BL._AC_UF1000,1000_QL80_.jpg",
+    "pages": 182,
+    "goodreads_url": "https://www.goodreads.com/book/show/18144590-the-alchemist?from_search=true&from_srp=true&qid=qhRjkmfuuN&rank=1"
+  }
+]
