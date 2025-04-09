@@ -3,6 +3,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const highlightBtn = document.querySelector("#highlightButton");
     const resetBtn = document.querySelector("#resetButton");
     const clearBtn = document.querySelector("#clearButton");
+
+    // ----- LOAD BOOKS -----
+    const container = document.getElementById('book-container');
+    const template = document.querySelector('.card-template');
+
+    container.innerHTML = '';
+
+    fetch('books.json')
+      .then(response => response.json())
+      .then(books => {
+        books.forEach(book => {
+
+     const colDiv = template.cloneNode(true);
+     colDiv.style.display = 'block';
+     colDiv.classList.remove('card-template'); 
+
+     const card = colDiv.querySelector('.book');
+     const titleLink = card.querySelector('.book-title');
+     const authorPara = card.querySelector('.book-author');
+     const coverImg = card.querySelector('.book-cover');
+
+
+     titleLink.textContent = book.title;
+     titleLink.href = book.goodreads_url;
+     authorPara.textContent = 'by ' + book.author;
+
+      coverImg.src = book.cover_image;
+      coverImg.alt = book.title + " cover";
+
+     container.appendChild(colDiv);
+         });
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
+      });
   
     // ----- EVENTS -----
     highlightBtn.addEventListener("click", () => {

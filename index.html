@@ -30,68 +30,19 @@
         <button class="btn btn-warning" id="highlightButton">Highlight long titles</button>
         <button class="btn btn-secondary" id="resetButton">Reset Borders</button>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">The Great Gatsby</a></h2>
-          <p class="card-text">by F. Scott Fitzgerald</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">To Kill a Mockingbird</a></h2>
-          <p class="card-text">by Harper Lee</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">1984</a></h2>
-          <p class="card-text">by George Orwell</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">Pride and Prejudice</a></h2>
-          <p class="card-text">by Jane Austen</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">Moby-Dick</a></h2>
-          <p class="card-text">by Herman Melville</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">The Catcher in the Rye</a></h2>
-          <p class="card-text">by J.D. Salinger</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">The Hobbit</a></h2>
-          <p class="card-text">by J.R.R. Tolkien</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">Fahrenheit 451</a></h2>
-          <p class="card-text">by Ray Bradbury</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">Jane Eyre</a></h2>
-          <p class="card-text">by Charlotte Brontë</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="book card h-100 p-3 border border-2">
-          <h2><a href="#">Wuthering Heights</a></h2>
-          <p class="card-text">by Emily Brontë</p>
+
+    <div class="container">
+      <div id="book-container" class="row row-cols-1 row-cols-md-4">
+        <div class="col card-template" style="display: none;">
+          <div class="book card h-100 p-3 border border-2">
+            <img class="book-cover" src="" alt="Cover Image" />
+            <h2><a href="#" class="book-title">Title </a></h2>
+            <p class="card-text book-author">by Author</p>
+          </div>
         </div>
       </div>
     </div>
+
   </main>
 
   <footer class="bg-dark text-white text-center py-3 mt-5">
