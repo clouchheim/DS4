@@ -31,10 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
      coverImg.src = book.cover_image;
      coverImg.alt = book.title + " cover";
 
-     card.addEventListener('click', () => {
-      window.location.href = book.goodreads_url;
-     });
-
      container.appendChild(colDiv);
          });
       })
@@ -42,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error('Error loading books:', error);
       });
   
+
     // ----- EVENTS -----
     highlightBtn.addEventListener("click", () => {
       books.forEach(book => {
