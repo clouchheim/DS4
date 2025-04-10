@@ -207,16 +207,57 @@ document.addEventListener("DOMContentLoaded", () => {
     // ----- SEARCH LOGIC -----
     searchInput.addEventListener("input", () => {
       const query = searchInput.value.toLowerCase();
-      books.forEach(book => {
-        const title = book.querySelector("h2").textContent.toLowerCase();
-        book.closest(".col").classList.toggle("d-none", !title.includes(query));
+      
+      resetTitleSort();
+      resetAuthorSort();
+      resetPubSort();
+      resetLengthSort();
+
+      container.innerHTML = '';
+      fetch('books.json')
+      .then(response => response.json())
+      .then(books => {
+        const selectedBooks = [];
+        books.forEach(book => {
+          const title = book.title.toLowerCase()
+          const author = book.author.toLowerCase()
+          const genres = book.genres.join().toLowerCase()
+          if (title.includes(query)) {
+            selectedBooks.push(book);
+          } else if (author.includes(query)) {
+            selectedBooks.push(book);
+          } else if (genres.includes(query)) {
+            selectedBooks.push(book);
+          }
+        });
+        
+        displayBooks(selectedBooks);
+              
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
       });
     });
   
     clearBtn.addEventListener("click", () => {
       searchInput.value = "";
-      books.forEach(book => {
-        book.closest(".col").classList.remove("d-none");
+      container.innerHTML = '';
+      
+      resetTitleSort();
+      resetAuthorSort();
+      resetPubSort();
+      resetLengthSort();
+
+      fetch('books.json')
+      .then(response => response.json())
+      .then(books => {
+
+        books.sort((a, b) => a.title.localeCompare(b.title)); // had them populate alphabetically on default
+        displayBooks(books);
+              
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
       });
     });
   });
