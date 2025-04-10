@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const books = document.querySelectorAll(".book");
-    const highlightBtn = document.querySelector("#highlightButton");
-    const resetBtn = document.querySelector("#resetButton");
+    const titleSort = document.querySelector("#titleSort");
+    const authorSort = document.querySelector("#authorSort");
+    const pubSort = document.querySelector("#pubSort");
+    const lengthSort = document.querySelector("#lengthSort");
+
     const clearBtn = document.querySelector("#clearButton");
 
     // ----- LOAD BOOKS -----
@@ -10,46 +13,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
     container.innerHTML = '';
 
+    function resetTitleSort () {
+      titleSort.textContent = "Sort by title";
+    }
+    function resetAuthorSort () {
+      authorSort.textContent = "Sort by author";
+    }
+    function resetPubSort () {
+      pubSort.textContent = "Sort by publication date";
+    }
+    function resetLengthSort () {
+      lengthSort.textContent = "Sort by length";
+    }
+
+    function displayBooks (books) {
+      books.forEach(book => {
+        const colDiv = template.cloneNode(true);
+        colDiv.style.display = 'block';
+        colDiv.classList.remove('card-template'); 
+        
+        const card = colDiv.querySelector('.book');
+        const titleLink = card.querySelector('.book-title');
+        const authorPara = card.querySelector('.book-author');
+        const coverImg = card.querySelector('.book-cover');
+        const button = card.querySelector('button');
+        
+        titleLink.textContent = book.title;
+        titleLink.href = book.goodreads_url;
+        authorPara.textContent = 'by ' + book.author;
+        
+        coverImg.src = book.cover_image;
+        coverImg.alt = book.title + " cover";
+        
+        // data for the Modal Button
+        button.setAttribute('data-bs-toggle', 'modal');
+        button.setAttribute('data-bs-target', '#learn-more-modal');
+        button.addEventListener('click', () => {
+          document.getElementById('modalTitle').textContent = book.title;
+          document.querySelector('.modal-body .book-author').textContent = 'Author: ' + book.author;
+          document.querySelector('.modal-body .book-genre').textContent = 
+            'Genre: ' + (Array.isArray(book.genres) ? book.genres.join(', ') : 'N/A');
+          document.querySelector('.modal-body .book-date').textContent = 'Published: ' + book.year_published;
+          document.querySelector('.modal-body .book-pages').textContent = 'Length: ' + book.pages + ' pages';
+          document.querySelector('.modal-body .book-description').textContent = book.description;
+          document.getElementById('good-reads-link').href = book.goodreads_url;
+        });
+        
+        container.appendChild(colDiv);
+        });  
+    }
+
     fetch('books.json')
       .then(response => response.json())
       .then(books => {
 
         books.sort((a, b) => a.title.localeCompare(b.title)); // had them populate alphabetically on default
-
-        books.forEach(book => {
-          const colDiv = template.cloneNode(true);
-          colDiv.style.display = 'block';
-          colDiv.classList.remove('card-template'); 
-          
-          const card = colDiv.querySelector('.book');
-          const titleLink = card.querySelector('.book-title');
-          const authorPara = card.querySelector('.book-author');
-          const coverImg = card.querySelector('.book-cover');
-          const button = card.querySelector('button');
-          
-          titleLink.textContent = book.title;
-          titleLink.href = book.goodreads_url;
-          authorPara.textContent = 'by ' + book.author;
-          
-          coverImg.src = book.cover_image;
-          coverImg.alt = book.title + " cover";
-          
-          // data for the Modal Button
-          button.setAttribute('data-bs-toggle', 'modal');
-          button.setAttribute('data-bs-target', '#learn-more-modal');
-          button.addEventListener('click', () => {
-            document.getElementById('modalTitle').textContent = book.title;
-            document.querySelector('.modal-body .book-author').textContent = 'Author: ' + book.author;
-            document.querySelector('.modal-body .book-genre').textContent = 
-              'Genre: ' + (Array.isArray(book.genres) ? book.genres.join(', ') : 'N/A');
-            document.querySelector('.modal-body .book-date').textContent = 'Published: ' + book.year_published;
-            document.querySelector('.modal-body .book-pages').textContent = 'Length: ' + book.pages + ' pages';
-            document.querySelector('.modal-body .book-description').textContent = book.description;
-            document.getElementById('good-reads-link').href = book.goodreads_url;
-          });
-          
-          container.appendChild(colDiv);
-          });        
+        displayBooks(books);
+              
       })
       .catch(error => {
         console.error('Error loading books:', error);
@@ -57,22 +77,122 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
     // ----- EVENTS -----
-    highlightBtn.addEventListener("click", () => {
-      books.forEach(book => {
-        const title = book.querySelector("h2").textContent;
-        if (title.length > 20) {
-          book.classList.remove("border-primary");
-          book.classList.add("border-danger", "border-3");
+    titleSort.addEventListener("click", () => {
+      resetAuthorSort();
+      resetPubSort();
+      resetLengthSort();
+      const text = titleSort.textContent;
+
+      container.innerHTML = '';
+      fetch('books.json')
+      .then(response => response.json())
+      .then(books => {
+        if (text.includes("↑")) {
+          books.sort((a, b) => a.title.localeCompare(b.title));
+          titleSort.textContent = "Sort by title ↓";
+
+        } else if (text.includes("↓")) {
+          books.sort((a, b) => b.title.localeCompare(a.title));
+          titleSort.textContent = "Sort by title ↑";
+        } else { //not set yet
+          books.sort((a, b) => a.title.localeCompare(b.title));
+          titleSort.textContent = "Sort by title ↓";
         }
+        displayBooks(books);
+              
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
       });
     });
-  
-    resetBtn.addEventListener("click", () => {
-      books.forEach(book => {
-        book.classList.remove("border-danger", "border-3", "bg-info", "text-white", "d-none");
-        book.classList.add("border-primary");
+
+    authorSort.addEventListener("click", () => {
+      resetTitleSort();
+      resetPubSort();
+      resetLengthSort();
+      const text = authorSort.textContent;
+      
+      container.innerHTML = '';
+      fetch('books.json')
+      .then(response => response.json())
+      .then(books => {
+        if (text.includes("↑")) {
+          books.sort((a, b) => a.author.localeCompare(b.author));
+          authorSort.textContent = "Sort by author ↓";
+
+        } else if (text.includes("↓")) {
+          books.sort((a, b) => b.author.localeCompare(a.author));
+          authorSort.textContent = "Sort by author ↑";
+        } else { //not set yet
+          books.sort((a, b) => a.author.localeCompare(b.author));
+          authorSort.textContent = "Sort by author ↓";
+        }
+        displayBooks(books);
+              
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
       });
-      searchInput.value = "";
+    });
+
+    pubSort.addEventListener("click", () => {
+      resetTitleSort();
+      resetAuthorSort();
+      resetLengthSort();
+      const text = pubSort.textContent;
+
+      container.innerHTML = '';
+      fetch('books.json')
+      .then(response => response.json())
+      .then(books => {
+        if (text.includes("↑")) {
+          books.sort((a, b) => a.year_published - b.year_published);
+          pubSort.textContent = "Sort by publication date ↓";
+
+        } else if (text.includes("↓")) {
+          books.sort((a, b) => b.year_published - a.year_published);
+          pubSort.textContent = "Sort by publication date ↑";
+        } else { //not set yet
+          books.sort((a, b) => a.year_published - b.year_published);
+          pubSort.textContent = "Sort by publication date ↓";
+        }
+        
+        displayBooks(books);
+              
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
+      });
+    });
+
+    lengthSort.addEventListener("click", () => {
+      resetTitleSort();
+      resetAuthorSort();
+      resetPubSort();
+      const text = lengthSort.textContent;
+
+      container.innerHTML = '';
+      fetch('books.json')
+      .then(response => response.json())
+      .then(books => {
+        if (text.includes("↑")) {
+          books.sort((a, b) => a.pages - b.pages);
+          lengthSort.textContent = "Sort by length ↓";
+
+        } else if (text.includes("↓")) {
+          books.sort((a, b) => b.pages - a.pages);
+          lengthSort.textContent = "Sort by length ↑";
+        } else { //not set yet
+          books.sort((a, b) => a.pages - b.pages);
+          lengthSort.textContent = "Sort by length ↓";
+        }
+        
+        displayBooks(books);
+              
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
+      });
     });
   
     books.forEach(book => {
