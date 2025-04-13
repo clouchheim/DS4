@@ -89,14 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(books => {
         if (text.includes("↓")) {
           books.sort((a, b) => a.title.localeCompare(b.title));
-          titleSort.textContent = "Sort by title ↓";
+          titleSort.textContent = "Sort by title ↑";
 
         } else if (text.includes("↑")) {
           books.sort((a, b) => b.title.localeCompare(a.title));
-          titleSort.textContent = "Sort by title ↑";
+          titleSort.textContent = "Sort by title ↓";
         } else { //not set yet
           books.sort((a, b) => a.title.localeCompare(b.title));
-          titleSort.textContent = "Sort by title ↓";
+          titleSort.textContent = "Sort by title ↑";
         }
         displayBooks(books);
               
@@ -118,14 +118,14 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(books => {
         if (text.includes("↓")) {
           books.sort((a, b) => a.author.localeCompare(b.author));
-          authorSort.textContent = "Sort by author ↓";
+          authorSort.textContent = "Sort by author ↑";
 
         } else if (text.includes("↑")) {
           books.sort((a, b) => b.author.localeCompare(a.author));
-          authorSort.textContent = "Sort by author ↑";
+          authorSort.textContent = "Sort by author ↓";
         } else { //not set yet
           books.sort((a, b) => a.author.localeCompare(b.author));
-          authorSort.textContent = "Sort by author ↓";
+          authorSort.textContent = "Sort by author ↑";
         }
         displayBooks(books);
               
@@ -147,14 +147,14 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(books => {
         if (text.includes("↓")) {
           books.sort((a, b) => a.year_published - b.year_published);
-          pubSort.textContent = "Sort by publication date ↓";
+          pubSort.textContent = "Sort by publication date ↑";
 
         } else if (text.includes("↑")) {
           books.sort((a, b) => b.year_published - a.year_published);
-          pubSort.textContent = "Sort by publication date ↑";
+          pubSort.textContent = "Sort by publication date ↓";
         } else { //not set yet
           books.sort((a, b) => a.year_published - b.year_published);
-          pubSort.textContent = "Sort by publication date ↓";
+          pubSort.textContent = "Sort by publication date ↑";
         }
         
         displayBooks(books);
@@ -177,14 +177,14 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(books => {
         if (text.includes("↓")) {
           books.sort((a, b) => a.pages - b.pages);
-          lengthSort.textContent = "Sort by length ↓";
+          lengthSort.textContent = "Sort by length ↑";
 
         } else if (text.includes("↑")) {
           books.sort((a, b) => b.pages - a.pages);
-          lengthSort.textContent = "Sort by length ↑";
+          lengthSort.textContent = "Sort by length ↓";
         } else { //not set yet
           books.sort((a, b) => a.pages - b.pages);
-          lengthSort.textContent = "Sort by length ↓";
+          lengthSort.textContent = "Sort by length ↑";
         }
         
         displayBooks(books);
