@@ -15,9 +15,7 @@
       <nav>
         <ul class="nav">
           <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#">Categories</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -33,6 +31,7 @@
         <button class="btn btn-warning" id="authorSort">Sort by author</button>
         <button class="btn btn-warning" id="pubSort">Sort by publication date</button>
         <button class="btn btn-warning" id="lengthSort">Sort by length</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#categories-modal">Categories</button>
     </div>
 
     <div class="container">
@@ -54,7 +53,8 @@
   </main>
 
   <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">&copy; 2023 Book Catalog Inc.</p>
+    <p class="mb-4">&copy; 2023 Book Catalog Inc. </p>
+    <p class="mb-0"> Contact: chl2@williams.edu | ry5@williams.edu | mv9@williams.edu | lyy1@williams.edu </p>
   </footer>
 
   <div class="modal fade" id="learn-more-modal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
@@ -73,6 +73,35 @@
           <div class="d-flex justify-content-center w-100">
             <a href="#" class="btn btn-primary" id="good-reads-link" target="_blank">View on Goodreads</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="categories-modal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalTitle">Categories - Search them up!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled">
+            <li>Classic Fiction</li>
+            <li>Coming-of-Age</li>
+            <li>Dystopian</li>
+            <li>Romance</li>
+            <li>Adventure</li>
+            <li>Fantasy</li>
+            <li>Gothic Fiction</li>
+            <li>Philosophical Fiction</li>
+            <li>Psychological Fiction</li>
+            <li>Historical Fiction</li>
+            <li>Science Fiction</li>
+            <li>Horror</li>
+            <li>Mythology</li>
+            <li>Epic Poetry</li>
+          </ul>
         </div>
       </div>
     </div>
