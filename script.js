@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       lengthSort.textContent = "Sort by length";
     }
 
-    function displayBooks (books) {
+    function displayBooks (books, additional_info = "None") {
       books.forEach(book => {
         const colDiv = template.cloneNode(true);
         colDiv.style.display = 'block';
@@ -35,12 +35,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = colDiv.querySelector('.book');
         const titleLink = card.querySelector('.book-title');
         const authorPara = card.querySelector('.book-author');
+        const additional = card.querySelector('.book-additional');
         const coverImg = card.querySelector('.book-cover');
         const button = card.querySelector('button');
         
         titleLink.textContent = book.title;
         titleLink.href = book.goodreads_url;
         authorPara.textContent = 'by ' + book.author;
+
+        if (additional_info === "None") {
+          additional.style.display = "none";
+        } else if (additional_info === "Date") {
+          additional.style.display = "block";
+          additional.textContent = "Published: " + book.year_published;
+        } else if (additional_info === "Pages") {
+          additional.style.display = "block";
+          additional.textContent = "Length: " + book.pages;
+        } else if (additional_info === "Genres") {
+          additional.style.display = "block";
+          additional.textContent = "Genres: " + book.genres.join().replace(/,/g, ', ');
+        }
         
         coverImg.src = book.cover_image;
         coverImg.alt = book.title + " cover";
@@ -68,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(books => {
 
         books.sort((a, b) => a.title.localeCompare(b.title)); // had them populate alphabetically on default
+        titleSort.textContent = "Sort by title (A → Z)";
         displayBooks(books);
               
       })
@@ -87,16 +102,16 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch('books.json')
       .then(response => response.json())
       .then(books => {
-        if (text.includes("↓")) {
+        if (text.includes("(Z → A)")) {
           books.sort((a, b) => a.title.localeCompare(b.title));
-          titleSort.textContent = "Sort by title ↑";
+          titleSort.textContent = "Sort by title (A → Z)";
 
-        } else if (text.includes("↑")) {
+        } else if (text.includes("(A → Z)")) {
           books.sort((a, b) => b.title.localeCompare(a.title));
-          titleSort.textContent = "Sort by title ↓";
+          titleSort.textContent = "Sort by title (Z → A)";
         } else { //not set yet
           books.sort((a, b) => a.title.localeCompare(b.title));
-          titleSort.textContent = "Sort by title ↑";
+          titleSort.textContent = "Sort by title (A → Z)";
         }
         displayBooks(books);
               
@@ -116,16 +131,16 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch('books.json')
       .then(response => response.json())
       .then(books => {
-        if (text.includes("↓")) {
+        if (text.includes("(Z → A)")) {
           books.sort((a, b) => a.author.localeCompare(b.author));
-          authorSort.textContent = "Sort by author ↑";
+          authorSort.textContent = "Sort by author (A → Z)";
 
-        } else if (text.includes("↑")) {
+        } else if (text.includes("(A → Z)")) {
           books.sort((a, b) => b.author.localeCompare(a.author));
-          authorSort.textContent = "Sort by author ↓";
+          authorSort.textContent = "Sort by author (Z → A)";
         } else { //not set yet
           books.sort((a, b) => a.author.localeCompare(b.author));
-          authorSort.textContent = "Sort by author ↑";
+          authorSort.textContent = "Sort by author (A → Z)";
         }
         displayBooks(books);
               
@@ -145,19 +160,19 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch('books.json')
       .then(response => response.json())
       .then(books => {
-        if (text.includes("↓")) {
+        if (text.includes("(latest → earliest)")) {
           books.sort((a, b) => a.year_published - b.year_published);
-          pubSort.textContent = "Sort by publication date ↑";
+          pubSort.textContent = "Sort by publication date (earliest → latest)";
 
-        } else if (text.includes("↑")) {
+        } else if (text.includes("(earliest → latest)")) {
           books.sort((a, b) => b.year_published - a.year_published);
-          pubSort.textContent = "Sort by publication date ↓";
+          pubSort.textContent = "Sort by publication date (latest → earliest)";
         } else { //not set yet
           books.sort((a, b) => a.year_published - b.year_published);
-          pubSort.textContent = "Sort by publication date ↑";
+          pubSort.textContent = "Sort by publication date (earliest → latest)";
         }
         
-        displayBooks(books);
+        displayBooks(books, "Date");
               
       })
       .catch(error => {
@@ -175,19 +190,19 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch('books.json')
       .then(response => response.json())
       .then(books => {
-        if (text.includes("↓")) {
+        if (text.includes("(longest → shortest)")) {
           books.sort((a, b) => a.pages - b.pages);
-          lengthSort.textContent = "Sort by length ↑";
+          lengthSort.textContent = "Sort by length (shortest → longest)";
 
-        } else if (text.includes("↑")) {
+        } else if (text.includes("(shortest → longest)")) {
           books.sort((a, b) => b.pages - a.pages);
-          lengthSort.textContent = "Sort by length ↓";
+          lengthSort.textContent = "Sort by length (longest → shortest)";
         } else { //not set yet
           books.sort((a, b) => a.pages - b.pages);
-          lengthSort.textContent = "Sort by length ↑";
+          lengthSort.textContent = "Sort by length (shortest → longest)";
         }
         
-        displayBooks(books);
+        displayBooks(books, "Pages");
               
       })
       .catch(error => {
@@ -231,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
         
-        displayBooks(selectedBooks);
+        displayBooks(selectedBooks, "Genres");
               
       })
       .catch(error => {
