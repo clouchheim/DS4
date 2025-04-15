@@ -275,5 +275,52 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error('Error loading books:', error);
       });
     });
+
+    const genreForm = document.getElementById("genreForm");
+    const clearGenre = document.getElementById("clearGenre");
+
+    genreForm.addEventListener("change", () => {
+    const selectedGenre = document.querySelector("input[name='genreRadio']:checked").value.toLowerCase();
+  
+    resetTitleSort();
+    resetAuthorSort();
+    resetPubSort();
+    resetLengthSort();
+
+    container.innerHTML = '';
+    fetch('books.json')
+    .then(response => response.json())
+    .then(books => {
+      const filtered = books.filter(book => 
+        book.genres.some(genre => genre.toLowerCase().includes(selectedGenre))
+      );
+      displayBooks(filtered, "Genres");
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
+      });
+    });
+
+    clearGenre.addEventListener("click", () => {
+    const checked = document.querySelector("input[name='genreRadio']:checked");
+    if (checked) checked.checked = false;
+
+    resetTitleSort();
+    resetAuthorSort();
+    resetPubSort();
+    resetLengthSort();
+
+    searchInput.value = "";
+    container.innerHTML = '';
+    fetch('books.json')
+    .then(response => response.json())
+    .then(books => {
+      books.sort((a, b) => a.title.localeCompare(b.title));
+      displayBooks(books);
+      })
+      .catch(error => {
+        console.error('Error loading books:', error);
+      });
+    });
   });
   

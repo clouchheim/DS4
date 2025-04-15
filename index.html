@@ -50,7 +50,6 @@
         </div>
       </div>
     </div>
-
   </main>
 
   <footer class="bg-dark text-white text-center py-3 mt-5">
@@ -83,26 +82,27 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalTitle">Categories - Search them up!</h1>
+          <h1 class="modal-title fs-5" id="modalTitle">Select Genre</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <ul class="list-unstyled">
-            <li>Adventure</li>
-            <li>Classic Fiction</li>
-            <li>Coming-of-Age</li>
-            <li>Dystopian</li>
-            <li>Epic Poetry</li>
-            <li>Fantasy</li>
-            <li>Gothic Fiction</li>
-            <li>Historical Fiction</li>
-            <li>Horror</li>
-            <li>Mythology</li>
-            <li>Philosophical Fiction</li>
-            <li>Psychological Fiction</li>
-            <li>Romance</li>
-            <li>Science Fiction</li>
-          </ul>
+          <form id="genreForm" class="d-flex flex-column gap-2">
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreAdventure" value="Adventure"><label class="form-check-label" for="genreAdventure">Adventure</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreClassic" value="Classic Fiction"><label class="form-check-label" for="genreClassic">Classic Fiction</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreComing" value="Coming-of-Age"><label class="form-check-label" for="genreComing">Coming-of-Age</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreDystopian" value="Dystopian"><label class="form-check-label" for="genreDystopian">Dystopian</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreEpic" value="Epic Poetry"><label class="form-check-label" for="genreEpic">Epic Poetry</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreFantasy" value="Fantasy"><label class="form-check-label" for="genreFantasy">Fantasy</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreGothic" value="Gothic Fiction"><label class="form-check-label" for="genreGothic">Gothic Fiction</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreHistorical" value="Historical Fiction"><label class="form-check-label" for="genreHistorical">Historical Fiction</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreHorror" value="Horror"><label class="form-check-label" for="genreHorror">Horror</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreMythology" value="Mythology"><label class="form-check-label" for="genreMythology">Mythology</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genrePhilosophy" value="Philosophical Fiction"><label class="form-check-label" for="genrePhilosophy">Philosophical Fiction</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genrePsychological" value="Psychological Fiction"><label class="form-check-label" for="genrePsychological">Psychological Fiction</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreRomance" value="Romance"><label class="form-check-label" for="genreRomance">Romance</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="genreRadio" id="genreSciFi" value="Science Fiction"><label class="form-check-label" for="genreSciFi">Science Fiction</label></div>
+            <button type="button" class="btn btn-outline-secondary mt-3" id="clearGenre">Clear Genre Filter</button>
+          </form>
         </div>
       </div>
     </div>
@@ -111,5 +111,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
