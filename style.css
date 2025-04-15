@@ -1,60 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
 body {
-    color: black;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 30px;
-  }
-  
-  nav ul li a {
-    text-decoration: underline;
-    font-weight: bold;
-  }
-  
-  .book-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 30px;
-  }
-  
-  .book-row {
-    padding-bottom: 20px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 1.5rem;
-  }
+  color: #1e1e1e;
+  background-color: #f8f6f1;
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
 
-  .book {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 10px;
-  }
-  
-  .book .btn {
-    margin-top: auto;
-    margin-bottom: 10px;
-  }
+header {
+  text-align: center;
+  padding: 10px;
+}
 
-  /* .book-name {
-    color: black;
-  } */
-  
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #c9b037;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.book-row {
+  padding-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+/* Card style */
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Button inside book cards */
+.book .btn {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+/* New button and color overrides */
+.bg-primary {
+  background-color: #2e5339 !important;
+}
+
+.text-primary {
+  color: #2e5339 !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.btn-outline-primary {
+  color: #2e5339 !important;
+  border-color: #2e5339 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2e5339 !important;
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #2e5339 !important;
+  border-color: #2e5339 !important;
+}
+
+.btn-primary:hover {
+  background-color: #1f3b29 !important;
+  border-color: #1f3b29 !important;
+}
